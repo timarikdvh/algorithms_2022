@@ -33,7 +33,7 @@ def hash_unique_substrings(word):
         for i in range(len(word)-j+1):
             a.add((hashlib.sha256((word[i:i+j]).encode())).hexdigest())
         j += 1
-    return a
+    return len(a)
 
 
 print(hash_unique_substrings('papa'))
